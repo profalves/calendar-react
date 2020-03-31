@@ -1,25 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Modal, { setAppElement } from 'react-modal';
+import { Swipeable } from 'react-swipeable';
+
+import { GlobalStyle, Container, Btn, customModal } from "./styles";
+
+import Calendar from './components/calendar/';
+
+
+setAppElement('#root')
 
 function App() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    // ...
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <Container>
+        <Btn onClick={openModal}>Open Modal</Btn>
+
+      </Container>
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        shouldCloseOnOverlayClick={false}
+        style={customModal}
+      >
+        <Swipeable onSwipedDown={(eventData) => console.log('swipe!', eventData)} >
+          <header>
+            <button onClick={closeModal}><strong>X</strong> </button>
+            <span> Calendar</span>
+          </header>
+          <Calendar />
+        </Swipeable>
+      </Modal>
+    </>
   );
 }
 
