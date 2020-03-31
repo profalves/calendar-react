@@ -5,7 +5,7 @@ A simple calendar app made with react and cordova
 ![example](https://user-images.githubusercontent.com/2893710/78073720-ce707380-7377-11ea-8401-3b7779c6eba5.png)
 
 
-Experimente com [Gitpod](gitpod.io/#https://github.com/profalves/calendar-react)
+Experimente com [Gitpod](https://gitpod.io/#github.com/profalves/calendar-react)
 
 
 ### Available Scripts
