@@ -1,4 +1,4 @@
-# Calendar Reaload App
+# Calendar Reload App
 
 A simple calendar app made with react and cordova
 
@@ -6,9 +6,6 @@ A simple calendar app made with react and cordova
 
 ![example](https://user-images.githubusercontent.com/2893710/78073720-ce707380-7377-11ea-8401-3b7779c6eba5.png)
 
-
-
-#### Experiment with [Gitpod](https://gitpod.io/#github.com/profalves/calendar-react)
 
 
 ### Available Scripts

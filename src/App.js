@@ -74,7 +74,7 @@ function App() {
             </HeaderModal>
             <Calendar />
             <BtnWrapper>
-              <Btn>Apply</Btn>
+              <Btn onClick={closeModal}>Apply</Btn>
             </BtnWrapper>
           </Swipeable>
         </Modal>

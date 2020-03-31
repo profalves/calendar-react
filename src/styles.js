@@ -53,11 +53,13 @@ export const Btn = styled.button`
   margin: 10px 20px;
   border-radius: 20px;
   min-width: 250px;
+  border: 0;
+  box-shadow: 3px 4px 5px #ccc;
 `
 
 export const BtnWrapper = styled.div`
   display: flex;
-  justify-content: center
+  justify-content: center;
 `
 
 const animation = keyframes`${slideInUp}`;
