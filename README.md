@@ -2,6 +2,8 @@
 
 A simple calendar app made with react and cordova
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#snapshot/1d311d6a-c228-4ac4-9a49-623ae4f6eead)
+
 ![example](https://user-images.githubusercontent.com/2893710/78073720-ce707380-7377-11ea-8401-3b7779c6eba5.png)
 
 
