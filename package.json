@@ -31,9 +31,12 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "move": "mv build www || move build www",
-    "deploy": "npm run build || npm run move",
-    "cordova:android": "npm run build && npm run move && cordova build android",
-    "cordova:ios": "npm run build && npm run move && cordova build ios"
+    "clear": "rm -rf www",
+    "deploy": "npm run build && npm run clear && npm run move",
+    "emule:android": "npm run deploy && cordova run android",
+    "emule:ios": "npm run deploy && cordova run ios",
+    "cordova:android": "npm run deploy && cordova build android",
+    "cordova:ios": "npm run deploy && cordova build ios"
   },
   "eslintConfig": {
     "extends": "react-app"

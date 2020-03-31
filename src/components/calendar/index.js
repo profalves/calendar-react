@@ -10,7 +10,7 @@ function Calendar() {
   const [range, setRange] = useState([
     {
       startDate: new Date(),
-      endDate: addDays(new Date(), 2),
+      endDate: new Date(), //addDays(new Date(), 2), //for add range automatic
       key: 'selection'
     }
   ]);
