@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { DateRange } from 'react-date-range';
 // import { addDays } from 'date-fns';
-import * as locales from 'react-date-range/dist/locale';
+// import * as locales from 'react-date-range/dist/locale'; //i18n
 import '../../css/styles.css'; // main calendar css file
 import '../../css/theme/custom.css'; // theme calendar custom css file
 import { Container } from './styled';
@@ -23,7 +23,6 @@ function Calendar() {
         moveRangeOnFirstSelection={true}
         rangeColors={['#15d4d8 ']}
         ranges={range}
-        locale={locales['pt']}
         scroll={{ enable: false }}
         showDateDisplay={false}
       />
