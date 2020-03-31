@@ -2,15 +2,15 @@ import React, { useState } from 'react'
 import { DateRange } from 'react-date-range';
 import { addDays } from 'date-fns';
 import * as locales from 'react-date-range/dist/locale';
-import 'react-date-range/dist/styles.css'; // main css file
-import 'react-date-range/dist/theme/default.css'; // theme css file
+import '../../css/styles.css'; // main calendar css file
+import '../../css/theme/custom.css'; // theme calendar custom css file
 import { Container } from './styled';
 
 function Calendar() {
   const [range, setRange] = useState([
     {
       startDate: new Date(),
-      endDate: addDays(new Date(), 5),
+      endDate: addDays(new Date(), 2),
       key: 'selection'
     }
   ]);
@@ -20,9 +20,12 @@ function Calendar() {
       <DateRange
         editableDateInputs={true}
         onChange={item => setRange([item.selection])}
-        moveRangeOnFirstSelection={false}
+        moveRangeOnFirstSelection={true}
+        rangeColors={['#15d4d8 ']}
         ranges={range}
         locale={locales['pt']}
+        scroll={{ enable: false }}
+        showDateDisplay={false}
       />
     </Container>
 
